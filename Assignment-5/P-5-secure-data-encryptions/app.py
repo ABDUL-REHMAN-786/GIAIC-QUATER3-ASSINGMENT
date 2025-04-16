@@ -1,78 +1,9 @@
-# import streamlit as st
-
-# # ✅ This must be FIRST Streamlit command
-# st.set_page_config(page_title="Secure Data Vault", page_icon="🛡️", initial_sidebar_state="collapsed")
-
-
-
-# import hashlib
-# import json
-# import os
-# import time
-# from cryptography.fernet import Fernet
-# from datetime import datetime
-
-# # -----------------------------
-# # 📁 JSON File Handling
-# # -----------------------------
-# DATA_FILE = "data.json"
-# LOCK_FILE = "lock.json"
-# USERS_FILE = "users.json"
-
-# def load_data():
-#     if os.path.exists(DATA_FILE):
-#         try:
-#             with open(DATA_FILE, "r", encoding="utf-8") as f:
-#                 return json.load(f)
-#         except json.JSONDecodeError:
-#             return {}
-#     return {}
-
-# def save_data(data):
-#     with open(DATA_FILE, "w", encoding="utf-8") as f:
-#         json.dump(data, f, indent=4)
-
-# def load_locks():
-#     if os.path.exists(LOCK_FILE):
-#         try:
-#             with open(LOCK_FILE, "r", encoding="utf-8") as f:
-#                 return json.load(f)
-#         except json.JSONDecodeError:
-#             return {}
-#     return {}
-
-# def save_locks(data):
-#     with open(LOCK_FILE, "w", encoding="utf-8") as f:
-#         json.dump(data, f, indent=4)
-
-# def load_users():
-#     if os.path.exists(USERS_FILE):
-#         try:
-#             with open(USERS_FILE, "r", encoding="utf-8") as f:
-#                 return json.load(f)
-#         except json.JSONDecodeError:
-#             return {}
-#     return {}
-
-# def save_users(users):
-#     with open(USERS_FILE, "w", encoding="utf-8") as f:
-#         json.dump(users, f, indent=4)
-
-# # -----------------------------
-# # 🔐 Key and Cipher Setup
-# # -----------------------------
-# @st.cache_resource
-# def get_cipher():
-#     key = Fernet.generate_key()
-#     return Fernet(key)
-
-# cipher = get_cipher()
-
-
 import streamlit as st
 
-# ✅ MUST be the first Streamlit command
+# ✅ This must be FIRST Streamlit command
 st.set_page_config(page_title="Secure Data Vault", page_icon="🛡️", initial_sidebar_state="collapsed")
+
+
 
 import hashlib
 import json
@@ -136,6 +67,7 @@ def get_cipher():
     return Fernet(key)
 
 cipher = get_cipher()
+
 
 
 
