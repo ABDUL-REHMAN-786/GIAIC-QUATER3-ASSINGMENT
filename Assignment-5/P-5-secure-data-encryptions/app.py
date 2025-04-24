@@ -1,4 +1,10 @@
 import streamlit as st
+
+# ✅ This must be FIRST Streamlit command
+st.set_page_config(page_title="Secure Data Vault", page_icon="🛡️", initial_sidebar_state="collapsed")
+
+
+
 import hashlib
 import json
 import os
@@ -61,6 +67,47 @@ def get_cipher():
     return Fernet(key)
 
 cipher = get_cipher()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # -----------------------------
 # 📆 Load Data into Session State
